@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ulak-system
+  name: ulakmaster
+spec:
+  selector:
+    matchLabels:
+      app: ulakmaster
+  template:
+    metadata:
+      labels:
+        app: ulakmaster
+    spec:
+      containers:
+      - name: ulakmaster
+        image: ubuntu:latest
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5000

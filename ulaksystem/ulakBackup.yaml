@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: ulak-system
+  name: ulakbackup
+spec:
+  selector:
+    matchLabels:
+      app: ulakbackup
+  template:
+    metadata:
+      labels:
+        app: ulakbackup
+    spec:
+      containers:
+      - name: ulakbackup
+        image: ubuntu:latest
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 4000
