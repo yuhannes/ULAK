@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: ulak-system
-  name: ulakmaster-deployment
+  name: ulakmaster
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: ulakmaster
@@ -16,9 +16,4 @@ spec:
       containers:
       - name: ulakmaster
         image: ubuntu:latest
-        resources:
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 5000
+        command: ["/bin/bash", "-c", "while true; do echo Hello-Ubuntu; sleep 15 ; done"]
