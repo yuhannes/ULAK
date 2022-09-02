@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: ulak-system
+  name: ulakpvc
+spec:
+  selector:
+    matchLabels:
+      app: "ulakmasterpod"
+  storageClassName: ""
+  resources:
+    requests:
+      storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce

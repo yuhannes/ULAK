@@ -10,7 +10,9 @@ apt-get install openssh-client
 
 ```sh
 passwd root
+```
 
+```sh
 apt install openssh-server
 nano /etc/ssh/sshd_config
 /etc/init.d/ssh restart
