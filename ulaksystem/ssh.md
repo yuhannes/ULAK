@@ -6,6 +6,12 @@
 apt-get install openssh-client
 ```
 
+```sh
+ssh-keygen
+ssh-copy-id -i /client-id_rsa.pub remote_host
+ssh remote_host
+```
+
 ## _OpenSSH Server_
 
 ```sh
