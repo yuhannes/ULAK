@@ -1,11 +1,15 @@
 #!/bin/bash
 
+RED="\e[31m"
+GREEN="\e[32m"
+ENDCOLOR="\e[0m"
+
 # APT
 # echo "UBUNTU APT"
 # apt-get update
 
 # RSYNC
-echo "RSYNC"
+echo -e "${RED}RSYNC${ENDCOLOR}"
 apt-get -y install rsync
 
 # CURL
@@ -13,7 +17,7 @@ apt-get -y install rsync
 # apt-get -y install curl
 
 # TEST FILES
-echo "TEST FILES"
+echo -e "${RED}TEST FILES${ENDCOLOR}"
 mkdir data
 cd data/
 curl http://ipv4.download.thinkbroadband.com/20MB.zip --output 20MB.zip
