@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # APT
-echo "UBUNTU APT"
-apt-get update
+# echo "UBUNTU APT"
+# apt-get update
 
 # RSYNC
 echo "RSYNC"
-apt-get install rsync
+apt-get -y install rsync
 
 # CURL
-echo "CURL"
-apt-get install curl
+# echo "CURL"
+# apt-get -y install curl
 
 # TEST FILES
 echo "TEST FILES"

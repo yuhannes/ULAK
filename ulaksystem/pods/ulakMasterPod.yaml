@@ -10,4 +10,4 @@ spec:
   containers:
   - name: ulakmasterpod
     image: ubuntu:latest
-    command: ['sh', '-c', 'echo "[MASTER] Hello, Kubernetes!" && sleep 9999999999d && wait']
+    command: ['sh', '-c', 'echo "[MASTER] Hello, Kubernetes!" && apt-get update && apt-get -y install curl && sleep 9999999999d && wait']
