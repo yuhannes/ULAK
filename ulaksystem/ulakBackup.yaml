@@ -4,6 +4,7 @@ metadata:
   namespace: ulak-system
   name: ulakbackup
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: ulakbackup
@@ -15,9 +16,6 @@ spec:
       containers:
       - name: ulakbackup
         image: ubuntu:latest
-        resources:
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
+        command: ["/bin/bash", "-c", "while true; do echo Hello-Ubuntu [BACKUP]; sleep 15 ; done"]
         ports:
-        - containerPort: 4000
+          - containerPort: 4000

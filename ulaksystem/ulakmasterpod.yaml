@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  namespace: ulak-system
+  name: ulakmasterpod
+  labels:
+    name: ulakmasterpod
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: ulakmasterpod
+    image: ubuntu:latest
+    command: ['sh', '-c', 'echo "[MASTER] Hello, Kubernetes!" && sleep 9999999999d && wait']

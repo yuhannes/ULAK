@@ -17,3 +17,5 @@ spec:
       - name: ulakmaster
         image: ubuntu:latest
         command: ["/bin/bash", "-c", "while true; do echo Hello-Ubuntu; sleep 15 ; done"]
+        ports:
+          - containerPort: 22
