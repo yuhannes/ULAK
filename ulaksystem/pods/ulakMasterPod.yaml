@@ -17,3 +17,10 @@ spec:
       chmod +x init.sh && 
       sh init.sh && 
       sleep 9999999999d && wait']
+    volumeMounts:
+      - mountPath: /root/.ssh
+        name: master-ssh-key
+  volumes:
+    - name: master-ssh-key
+      persistentVolumeClaim:
+        claimName: sshpvc

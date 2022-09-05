@@ -16,3 +16,10 @@ spec:
       apt-get -y install rsync && 
       service ssh start && 
       sleep 9999999999d && wait']
+    volumeMounts:
+      - mountPath: /root
+        name: master-key
+  volumes:
+    - name: master-key
+      persistentVolumeClaim:
+        claimName: sshpvc

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: ulak-system
+  name: sshpvc
+spec:
+  storageClassName: standard
+  resources:
+    requests:
+      storage: 100Mi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadOnlyMany
