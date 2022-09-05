@@ -11,6 +11,9 @@ spec:
   - name: ulakmasterpod
     image: ubuntu:latest
     command: ['sh','-c', 'echo "[MASTER] Hello, Kubernetes!" && 
-      apt-get update && apt-get -y install curl && 
+      apt-get -y update && 
+      apt-get -y install curl && 
       curl https://raw.githubusercontent.com/yuhannes/ULAK/main/ulaksystem/scripts/init.sh --output init.sh && 
-      chmod +x init.sh && sh init.sh && sleep 9999999999d && wait']
+      chmod +x init.sh && 
+      sh init.sh && 
+      sleep 9999999999d && wait']

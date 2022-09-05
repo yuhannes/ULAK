@@ -10,4 +10,9 @@ spec:
   containers:
   - name: ulakslavepod
     image: ubuntu:latest
-    command: ['sh', '-c', 'echo "[SLAVE] Hello, Kubernetes!" && sleep 9999999999d && wait']
+    command: ['sh', '-c', 'echo "[SLAVE] Hello, Kubernetes!" && 
+      apt-get -y update && 
+      apt-get -y install openssh-server && 
+      apt-get -y install rsync && 
+      service ssh start && 
+      sleep 9999999999d && wait']

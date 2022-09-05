@@ -21,7 +21,9 @@ passwd root
 ```sh
 apt install openssh-server
 nano /etc/ssh/sshd_config
-/etc/init.d/ssh restart
+service ssh restart
+
+/etc/init.d/ssh restart (optional)
 ```
 
 ### _sshd_config_
