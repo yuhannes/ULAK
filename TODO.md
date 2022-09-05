@@ -10,5 +10,5 @@
 - [ ] PVC
 
 # ISSUES
-- [ ] SSH
+- [x] SSH
     - [ ] Secret
