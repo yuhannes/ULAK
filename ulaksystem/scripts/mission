@@ -1,0 +1,1 @@
+* * * * * echo "ULAK" > /data/ULAK_$(date +\%Y\%m\%d\%H\%M\%S).txt
