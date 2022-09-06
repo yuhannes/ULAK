@@ -15,11 +15,17 @@ spec:
       apt-get -y install openssh-server && 
       apt-get -y install rsync && 
       service ssh start && 
+      echo "[SLAVE] Status: Ready" && 
       sleep 9999999999d && wait']
     volumeMounts:
+      - mountPath: /dwh
+        name: datawarehouse
       - mountPath: /root
         name: master-key
   volumes:
+    - name: datawarehouse
+      persistentVolumeClaim:
+        claimName: ulakpvc
     - name: master-key
       persistentVolumeClaim:
         claimName: sshpvc

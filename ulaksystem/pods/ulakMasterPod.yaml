@@ -16,11 +16,17 @@ spec:
       curl https://raw.githubusercontent.com/yuhannes/ULAK/main/ulaksystem/scripts/init.sh --output init.sh && 
       chmod +x init.sh && 
       sh init.sh && 
+      echo "[MASTER] Status: Ready" && 
       sleep 9999999999d && wait']
     volumeMounts:
+      - mountPath: /dwh
+        name: datawarehouse
       - mountPath: /root/.ssh
         name: master-ssh-key
   volumes:
+    - name: datawarehouse
+      persistentVolumeClaim:
+        claimName: ulakpvc
     - name: master-ssh-key
       persistentVolumeClaim:
         claimName: sshpvc
