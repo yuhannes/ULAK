@@ -4,12 +4,13 @@
 - [x] Master Pod
 - [x] Slave Pod
 - [x] Rsync
+- [ ] Cron | Crontab
 
 # TO DO
 - [ ] Secret
-- [ ] PVC
+- [x] PVC
     - [x] SSH PVC
-    - [ ] ROOT PVC
+    - [x] ROOT PVC
 
 # ISSUES
 - [x] SSH
