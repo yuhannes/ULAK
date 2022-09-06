@@ -10,13 +10,28 @@ ENDCOLOR="\e[0m"
 
 # OpenSSH
 echo "${RED}OPENSSH${ENDCOLOR}"
-apt-get -y install openssh-client
+apt-get install -y openssh-client
 echo "${GREEN}OPENSSH PACKAGE ... DONE${ENDCOLOR}"
 
 # RSYNC
 echo "${RED}RSYNC${ENDCOLOR}"
-apt-get -y install rsync
+apt-get install -y rsync
 echo "${GREEN}RSYNC PACKAGE ... DONE${ENDCOLOR}"
+
+# CRON
+echo "${RED}CRON${ENDCOLOR}"
+apt-get install -y cron
+echo "${GREEN}CRON PACKAGE ... DONE${ENDCOLOR}"
+
+# CRONTAB(BCRON)
+echo "${RED}CRONTAB(BCRON)${ENDCOLOR}"
+apt-get install -y bcron
+echo "${GREEN}CRONTAB(BCRON) PACKAGE ... DONE${ENDCOLOR}"
+
+# CRON SERVICE
+echo "${RED}CRON SERVICE${ENDCOLOR}"
+service cron start
+echo "${GREEN}CRON IS RUNNING"
 
 # CURL
 # echo "CURL"

@@ -14,7 +14,10 @@ spec:
       apt-get -y update && 
       apt-get -y install openssh-server && 
       apt-get -y install rsync && 
+      apt-get install -y cron && 
+      apt-get install -y bcron && 
       service ssh start && 
+      service cron start && 
       echo "[SLAVE] Status: Ready" && 
       sleep 9999999999d && wait']
     volumeMounts:
