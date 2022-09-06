@@ -4,7 +4,7 @@
 - [x] Master Pod
 - [x] Slave Pod
 - [x] Rsync
-- [ ] Cron | Crontab
+- [x] Cron | Crontab
 
 # TO DO
 - [ ] Secret
