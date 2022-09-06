@@ -26,7 +26,28 @@ service ssh restart
 /etc/init.d/ssh restart (optional)
 ```
 
-### _sshd_config_
+## _Server's /etc/ssh/sshd_config file:_
+
+To enable password authentication, uncomment
+
+```sh
+#PasswordAuthentication yes
+````
+
+To enable root login, uncomment
+
+```sh
+#PermitRootLogin yes
+```
+
+To enable SSH key login, uncomment
+
+```sh
+#PubkeyAuthentication yes
+#AuthorizedKeysFile .ssh/authorized_keys
+```
+
+## _sshd_config_
 
 ```sh
 # This is the sshd server system-wide configuration file.  See
