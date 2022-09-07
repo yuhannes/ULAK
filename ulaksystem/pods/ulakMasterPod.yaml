@@ -21,7 +21,7 @@ spec:
     volumeMounts:
       - mountPath: /dwh
         name: datawarehouse
-      - mountPath: /root/.ssh
+      - mountPath: /master-ssh-key-dir
         name: master-ssh-key
   volumes:
     - name: datawarehouse
