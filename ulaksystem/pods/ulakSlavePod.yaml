@@ -15,9 +15,19 @@ spec:
       apt-get -y install curl && 
       apt-get -y install openssh-server && 
       apt-get -y install rsync && 
+      service ssh start && 
+      curl https://raw.githubusercontent.com/yuhannes/ULAK/main/ulaksystem/scripts/ssh_conf.sh --output ssh_conf.sh && 
+      chmod +x ssh_conf.sh && 
+      sh ssh_conf.sh && 
+      service ssh restart && 
+      mkdir ~/.ssh && 
+      chmod 700 ~/.ssh && 
+      touch ~/.ssh/authorized_keys && 
+      chmod 600 ~/.ssh/authorized_keys && 
+      cat /ssh-dir/id_rsa.pub >> /root/.ssh/authorized_keys && 
+      service ssh restart && 
       apt-get install -y cron && 
       apt-get install -y bcron && 
-      service ssh start && 
       service cron start && 
       echo "[SLAVE] Status: Ready" && 
       sleep 9999999999d && wait']
