@@ -18,7 +18,10 @@ ENDCOLOR="\e[0m"
 
 echo "${RED}SSH CONFIGURATOR${ENDCOLOR}"
 
-sed -re 's/^(\#?)([[:space:]]+)(PubkeyAuthentication)([[:space:]]+)no/\3\4yes/' -i.`date -I` /etc/ssh/sshd_config
-sed -re 's/^(\#)(   AuthorizedKeysFile)([[:space:]]+)(.*)/\2\3\4/' -i.`date -I` /etc/ssh/sshd_config
+sed -re 's/^(\#)(PubkeyAuthentication)([[:space:]]+)(.*)/\2\3\4/' -i.`date -I` /etc/ssh/sshd_config
+sed -re 's/^(\#)(AuthorizedKeysFile)([[:space:]]+)(.*)/\2\3\4/' -i.`date -I` /etc/ssh/sshd_config
 
-echo "${GREEN}SSH_CONFIG ... [DONE]"
+# sed -re 's/^(\#?)([[:space:]]+)(PubkeyAuthentication)([[:space:]]+)no/\3\4yes/' -i.`date -I` /etc/ssh/sshd_config
+# sed -re 's/^(\#)(   AuthorizedKeysFile)([[:space:]]+)(.*)/\2\3\4/' -i.`date -I` /etc/ssh/sshd_config
+
+echo "${GREEN}SSH_CONFIG ... [DONE]${ENDCOLOR}"
