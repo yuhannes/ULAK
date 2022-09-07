@@ -12,6 +12,7 @@ spec:
     image: ubuntu:latest
     command: ['sh', '-c', 'echo "[SLAVE] Hello, Kubernetes!" && 
       apt-get -y update && 
+      apt-get -y install curl && 
       apt-get -y install openssh-server && 
       apt-get -y install rsync && 
       apt-get install -y cron && 
