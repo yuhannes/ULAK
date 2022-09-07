@@ -3,17 +3,14 @@
 - [x] Namespace
 - [x] Master Pod
 - [x] Slave Pod
+- [X] SSH
 - [x] Rsync
+- [x] Curl
 - [x] Cron | Crontab
-
-# TO DO
-- [ ] Secret
+- [x] Test Files
 - [x] PVC
-    - [x] SSH PVC
-    - [x] ROOT PVC
-
-# ISSUES
-- [x] SSH
+    - [x] SSH PVC (100Mi)
+    - [x] ROOT PVC (10Gi)
 
 ## _Alternative methods:_
 Manually append your public key to the remote ssh server's key to authorized_keys file. For example, copy the content of your ~/.ssh/id_rsa.pub to the server's ~/.ssh/authorized_keys file.
