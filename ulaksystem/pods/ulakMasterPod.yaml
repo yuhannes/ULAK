@@ -19,6 +19,7 @@ spec:
       sh init.sh && 
       ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa && 
       cp /root/.ssh/id_rsa.pub /master-ssh-key-dir/ && 
+      crontab /mission && 
       echo "[MASTER] Status: Ready" && 
       sleep 9999999999d && wait']
     volumeMounts:
