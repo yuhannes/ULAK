@@ -2,6 +2,14 @@
 
 ## _OpenSSH Client_
 
+##### **_[NEW]_**:
+```sh
+ssh -o "StrictHostKeyChecking=no" remote_host
+```
+
+***
+
+##### **_[OLD]_**:
 ```sh
 apt-get install openssh-client
 ```
@@ -14,6 +22,7 @@ ssh remote_host
 
 ## _OpenSSH Server_
 
+##### **_[OLD]_**:
 ```sh
 passwd root
 ```
