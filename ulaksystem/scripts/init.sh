@@ -23,15 +23,15 @@ echo "${RED}CRON${ENDCOLOR}"
 apt-get install -y cron
 echo "${GREEN}CRON PACKAGE ... [DONE]${ENDCOLOR}"
 
-# CRONTAB(BCRON)
-echo "${RED}CRONTAB(BCRON)${ENDCOLOR}"
-apt-get install -y bcron
-echo "${GREEN}CRONTAB(BCRON) PACKAGE ... [DONE]${ENDCOLOR}"
+# # CRONTAB(BCRON)
+# echo "${RED}CRONTAB(BCRON)${ENDCOLOR}"
+# apt-get install -y bcron
+# echo "${GREEN}CRONTAB(BCRON) PACKAGE ... [DONE]${ENDCOLOR}"
 
 # CRON SERVICE
 echo "${RED}CRON SERVICE${ENDCOLOR}"
 service cron start
-echo "${GREEN}CRON IS RUNNING"
+echo "${GREEN}CRON IS RUNNING${ENDCOLOR}"
 
 # CURL
 # echo "CURL"
