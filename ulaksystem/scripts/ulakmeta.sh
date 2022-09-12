@@ -12,4 +12,4 @@ find /data -mmin +120 > /junk.log
 find /data/* -mmin +120 ! -path "/data/vip" ! -path "/data/vip/*" -delete
 
 # RSYNC
-rsync -raz --progress /data/ 172.17.0.4:/dwh/ --delete-before
+rsync --update -raz --progress /data/ 172.17.0.4:/dwh/ --delete-before
