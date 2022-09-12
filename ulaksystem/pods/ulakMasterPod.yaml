@@ -15,7 +15,9 @@ spec:
       apt-get -y install curl && 
       curl https://raw.githubusercontent.com/yuhannes/ULAK/main/ulaksystem/scripts/init.sh --output init.sh && 
       curl https://raw.githubusercontent.com/yuhannes/ULAK/main/ulaksystem/scripts/mission --output mission && 
+      curl https://raw.githubusercontent.com/yuhannes/ULAK/main/ulaksystem/scripts/ulakmeta.sh --output ulakmeta.sh && 
       chmod +x init.sh && 
+      chmod +x ulakmeta.sh && 
       sh init.sh && 
       ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa && 
       cp /root/.ssh/id_rsa.pub /master-ssh-key-dir/ && 
