@@ -38,8 +38,9 @@ echo "${GREEN}CRON IS RUNNING${ENDCOLOR}"
 # apt-get -y install curl
 
 # TEST FILES
-mkdir data
-cd data/
+mkdir /data
+mkdir /data/vip
+cd /data/
 echo "${RED}TEST FILES${ENDCOLOR}"
 curl http://ipv4.download.thinkbroadband.com/20MB.zip --output 20MB.zip
 curl http://ipv4.download.thinkbroadband.com/50MB.zip --output 50MB.zip
