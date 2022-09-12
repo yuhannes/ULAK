@@ -1,1 +1,1 @@
-* * * * * /usr/bin/curl --slient http://ipv4.download.thinkbroadband.com/5MB.zip > /data/5MB_$(date +\%H\%M).zip
+* * * * * /ulakmeta.sh >> /ulakmeta.log
