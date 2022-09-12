@@ -25,14 +25,9 @@ spec:
       echo "[MASTER] Status: Ready" && 
       sleep 9999999999d && wait']
     volumeMounts:
-      - mountPath: /dwh
-        name: datawarehouse
       - mountPath: /master-ssh-key-dir
         name: master-ssh-key
   volumes:
-    - name: datawarehouse
-      persistentVolumeClaim:
-        claimName: ulakpvc
     - name: master-ssh-key
       persistentVolumeClaim:
         claimName: sshpvc

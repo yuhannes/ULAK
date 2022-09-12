@@ -29,6 +29,7 @@ spec:
       apt-get install -y cron && 
       apt-get install -y bcron && 
       service cron start && 
+      service rsync start && 
       echo "[SLAVE] Status: Ready" && 
       sleep 9999999999d && wait']
     volumeMounts:
