@@ -1,1 +1,2 @@
-* * * * * echo "ULAK" > /data/ULAK_$(date +\%Y\%m\%d\%H\%M\%S).txt
+# * * * * * echo "ULAK" > /data/ULAK_$(date +\%Y\%m\%d\%H\%M\%S).txt
+* * * * * curl --slient http://ipv4.download.thinkbroadband.com/5MB.zip --output /data/5MB_$(date + \%M\%S).zip
