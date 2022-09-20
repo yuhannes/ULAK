@@ -13,3 +13,9 @@ find /data/* -mmin +60 ! -path "/data/vip" ! -path "/data/vip/*" -delete
 
 # RSYNC
 rsync --update -raz --progress --log-file=/meta.log /data/ 172.17.0.4:/dwh/ --delete-before
+if [ "$?" -eq "0" ]
+then
+  /usr/sbin/ssmtp ulaksystem@gmail.com < /email.txt
+else
+  /usr/sbin/ssmtp ulaksystem@gmail.com < /email.txt
+fi

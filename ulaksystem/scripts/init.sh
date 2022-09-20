@@ -33,6 +33,11 @@ echo "${RED}CRON SERVICE${ENDCOLOR}"
 service cron start
 echo "${GREEN}CRON IS RUNNING${ENDCOLOR}"
 
+# SSMTP
+echo "${RED}SSMTP${ENDCOLOR}"
+apt-get install -y ssmtp
+echo "${GREEN}SSMTP PACKAGE ... [DONE]${ENDCOLOR}"
+
 # CURL
 # echo "CURL"
 # apt-get -y install curl
