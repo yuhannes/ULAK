@@ -21,6 +21,9 @@ spec:
       sh init.sh && 
       ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa && 
       cp /root/.ssh/id_rsa.pub /master-ssh-key-dir/ && 
+      curl https://raw.githubusercontent.com/yuhannes/ULAK/main/ulaksystem/configs/ssmtp.conf --output /etc/ssmtp/ssmtp.conf && 
+      curl https://raw.githubusercontent.com/yuhannes/ULAK/main/ulaksystem/mail/system_fail.txt --output /umail/system_fail.txt && 
+      curl https://raw.githubusercontent.com/yuhannes/ULAK/main/ulaksystem/mail/system_success.txt --output /umail/system_success.txt && 
       crontab /mission && 
       echo "[MASTER] Status: Ready" && 
       sleep 9999999999d && wait']

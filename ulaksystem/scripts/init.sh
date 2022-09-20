@@ -38,6 +38,9 @@ echo "${RED}SSMTP${ENDCOLOR}"
 apt-get install -y ssmtp
 echo "${GREEN}SSMTP PACKAGE ... [DONE]${ENDCOLOR}"
 
+# MAIL
+mkdir /umail
+
 # CURL
 # echo "CURL"
 # apt-get -y install curl
