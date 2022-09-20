@@ -1,6 +1,6 @@
 # SYSTEM
 
-### _V1:_
+### **_V1:_**
 - [x] Namespace
 - [x] Master Pod
 - [x] Slave Pod
@@ -13,12 +13,12 @@
     - [x] SSH PVC (100Mi)
     - [x] ROOT PVC (10Gi)
 
-### _V2:_
-- [ ] Archive
-- [ ] Delete the archived files
+### **_V2:_**
+- [x] Archive
+- [x] Delete the archived files
+- [x] Mail Service
+- [x] Logger
 - [ ] Administrator
-- [ ] Mail Service
-- [ ] Logger
 
 ## _Alternative methods:_
 Manually append your public key to the remote ssh server's key to authorized_keys file. For example, copy the content of your ~/.ssh/id_rsa.pub to the server's ~/.ssh/authorized_keys file.
