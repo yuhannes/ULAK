@@ -19,7 +19,7 @@ tar -cvf ulak.tar /data/vip
 rsync --update -raz --progress --log-file=/meta.log --exclude 'vip' /data/ 172.17.0.4:/dwh/ --delete-before --human-readable
 if [ "$?" -eq "0" ]
 then
-  /usr/sbin/ssmtp ulaksystem@gmail.com < /umail/system_fail.txt
-else
   /usr/sbin/ssmtp ulaksystem@gmail.com < /umail/system_success.txt
+else
+  /usr/sbin/ssmtp ulaksystem@gmail.com < /umail/system_fail.txt
 fi
