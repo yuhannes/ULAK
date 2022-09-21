@@ -19,4 +19,3 @@
 - [x] Delete the archived files
 - [x] Mail Service
 - [x] Logger
-- [ ] Administrator
