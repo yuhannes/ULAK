@@ -12,13 +12,18 @@ spec:
         cronSchedule: "*/15 * * * *"
         logFile: /task1.log
       find:
-        workspace:
-        timeStamp:
-        timeArg:
-        excludeFolder:
-        excludeFiles:
-        operation:
-        logFile:
+        junk:
+          workspace:
+          timeStamp:
+          timeArg:
+          logFile:
+        delete:
+          workspace:
+          timeStamp:
+          timeArg:
+          excludeFolder:
+          excludeFiles:
+          operation:
       tar:
         mode:
         file:
