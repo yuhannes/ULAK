@@ -13,30 +13,31 @@ spec:
         logFile: /task1.log
       find:
         junk:
-          workspace:
-          timeStamp:
-          timeArg:
-          logFile:
+          workspace: /data
+          timeStamp: -mmin
+          timeArg: +60
+          logFile: /junk.log
         delete:
-          workspace:
-          timeStamp:
-          timeArg:
-          excludeFolder:
-          excludeFiles:
-          operation:
+          workspace: /data/*
+          timeStamp: -mmin
+          timeArg: +60
+          excludeFolder: "/data/vip"
+          excludeFiles: "/data/vip/*"
+          operation: -delete
       tar:
-        mode:
-        file:
-        path:
+        mode: -cvf
+        file: /data/ulak.tar
+        path: /data/vip
       rsync:
-        args:
-        logFile:
-        exclude:
-        path:
+        args: --update -raz --progress --delete-before --human-readable
+        logFile: /meta.log
+        exclude: 'vip'
+        path: /data/
         remoteHost:
-          ip:
-          destPath:
-        operation:
+          ip: 172.17.0.4
+          destPath: /dwh/
       smtp:
-        rxMail:
+        rxMail: ulaksystem@gmail.com
         mailFormat:
+          success: /umail/system_success.txt
+          fail: /umail/system_fail.txt
