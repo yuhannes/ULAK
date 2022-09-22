@@ -1,0 +1,37 @@
+apiVersion: ulaksystem/v1
+kind: TaskSpace
+metadata:
+  taskSet: 5
+  cronSet: 5
+spec:
+  tasks:
+    task1:
+      name: System Task 1
+      cron:
+        cronJob: /task1.sh
+        cronSchedule: "*/15 * * * *"
+        logFile: /task1.log
+      find:
+        workspace:
+        timeStamp:
+        timeArg:
+        excludeFolder:
+        excludeFiles:
+        operation:
+        logFile:
+      tar:
+        mode:
+        file:
+        path:
+      rsync:
+        args:
+        logFile:
+        exclude:
+        path:
+        remoteHost:
+          ip:
+          destPath:
+        operation:
+      smtp:
+        rxMail:
+        mailFormat:
