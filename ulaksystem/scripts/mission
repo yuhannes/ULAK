@@ -1,2 +1,1 @@
-*/15 * * * * /ulakmeta.sh >> /ulakmeta.log
-*/10 * * * * /ulakMetaV2.sh >> /ulakMetaV2.log
+*/5 * * * * /ulakMetaV2.sh >> /ulakMetaV2.log
