@@ -40,8 +40,8 @@ tar $config_spec_tasks_task1_tar_mode $config_spec_tasks_task1_tar_file $config_
 rsync $config_spec_tasks_task1_rsync_args --log-file=$config_spec_tasks_task1_rsync_logFile --exclude $config_spec_tasks_task1_rsync_exclude $config_spec_tasks_task1_rsync_path $config_spec_tasks_task1_rsync_remoteHost_ip:$config_spec_tasks_task1_rsync_remoteHost_destPath
 if [ "$?" -eq "0" ]
 then
-  /usr/sbin/ssmtp ulaksystem@gmail.com < /umail/system_success.txt
+  /usr/sbin/ssmtp $config_spec_tasks_task1_smtp_rxMail < $config_spec_tasks_task1_smtp_mailFormat_success
   rm /data/ulak.tar
 else
-  /usr/sbin/ssmtp ulaksystem@gmail.com < /umail/system_fail.txt
+  /usr/sbin/ssmtp $config_spec_tasks_task1_smtp_rxMail < $config_spec_tasks_task1_smtp_mailFormat_fail
 fi
