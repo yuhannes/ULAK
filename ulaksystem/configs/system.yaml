@@ -15,14 +15,14 @@ spec:
         junk:
           workspace: /data
           timeStamp: -mmin
-          timeArg: +60
+          timeArg: +5
           logFile: /junk.log
         delete:
           workspace: /data/*
           timeStamp: -mmin
-          timeArg: +60
-          excludeFolder: "/data/vip"
-          excludeFiles: "/data/vip/*"
+          timeArg: +5
+          excludeFolder: /data/vip
+          excludeFiles: /data/vip/*
           operation: -delete
       tar:
         mode: -cvf
@@ -31,10 +31,10 @@ spec:
       rsync:
         args: --update -raz --progress --delete-before --human-readable
         logFile: /meta.log
-        exclude: 'vip'
+        exclude: vip
         path: /data/
         remoteHost:
-          ip: 172.17.0.4
+          ip: 172.17.0.3
           destPath: /dwh/
       smtp:
         rxMail: ulaksystem@gmail.com
