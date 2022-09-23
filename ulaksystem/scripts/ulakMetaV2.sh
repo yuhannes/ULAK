@@ -19,22 +19,23 @@ parse_yaml() {
    }'
 }
 
-eval $(parse_yaml system.yaml "config_")
+eval $(parse_yaml /system.yaml "config_")
 
 # TEST FILES
-/usr/bin/curl --slient http://ipv4.download.thinkbroadband.com/5MB.zip > /data/5MB_$(date +\%H\%M).zip
+/usr/bin/curl -s http://ipv4.download.thinkbroadband.com/5MB.zip > /data/5MB_$(date +\%H\%M).zip
 
 # [FIND] JUNK FILES
-# find /data -mmin +60 > /junk.log
-find $config_spec_tasks_task1_find_junk_workspace $config_spec_tasks_task1_find_junk_timeStamp $config_spec_tasks_task1_find_junk_timeArg > $config_spec_tasks_task1_find_junk_logFile
+find /data -mmin +60 > /junk.log
+#find /data -mmin +60 >> $config_spec_tasks_task1_find_junk_logFile
+find $config_spec_tasks_task1_find_junk_workspace $config_spec_tasks_task1_find_junk_timeStamp $config_spec_tasks_task1_find_junk_timeArg >> $config_spec_tasks_task1_find_junk_logFile
 
 # [DELETE] JUNK FILES
 # find /data/* -mmin +60 ! -path "/data/vip" ! -path "/data/vip/*" -delete
-find $config_spec_tasks_task1_find_delete_workspace $config_spec_tasks_task1_find_delete_timeStamp $config_spec_tasks_task1_find_delete_timeArg ! -path "'$config_spec_tasks_task1_find_delete_excludeFolder'" ! -path "'$config_spec_tasks_task1_find_delete_excludeFiles'" $config_spec_tasks_task1_find_delete_operation
+find ${config_spec_tasks_task1_find_delete_workspace} $config_spec_tasks_task1_find_delete_timeStamp $config_spec_tasks_task1_find_delete_timeArg ! -path $config_spec_tasks_task1_find_delete_excludeFolder ! -path $config_spec_tasks_task1_find_delete_excludeFiles $config_spec_tasks_task1_find_delete_operation
 
 # ARCHIVE
 # tar -cvf /data/ulak.tar /data/vip
-tar $config_spec_tasks_task1_tar_mode $config_spec_tasks_task1_tar_file $config_spec_tasks_task1_tar_path
+tar $config_spec_tasks_task1_tar_mode $config_spec_tasks_task1_tar_file --absolute-names $config_spec_tasks_task1_tar_path
 
 # RSYNC
 # rsync --update -raz --progress --log-file=/meta.log --exclude 'vip' /data/ 172.17.0.4:/dwh/ --delete-before --human-readable
