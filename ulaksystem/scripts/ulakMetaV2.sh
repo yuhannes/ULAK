@@ -25,7 +25,7 @@ eval $(parse_yaml /system.yaml "config_")
 /usr/bin/curl -s http://ipv4.download.thinkbroadband.com/5MB.zip > /data/5MB_$(date +\%H\%M).zip
 
 # [FIND] JUNK FILES
-find /data -mmin +60 > /junk.log
+# find /data -mmin +60 > /junk.log
 #find /data -mmin +60 >> $config_spec_tasks_task1_find_junk_logFile
 find $config_spec_tasks_task1_find_junk_workspace $config_spec_tasks_task1_find_junk_timeStamp $config_spec_tasks_task1_find_junk_timeArg >> $config_spec_tasks_task1_find_junk_logFile
 
